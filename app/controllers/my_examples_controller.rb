@@ -11,4 +11,9 @@ class MyExamplesController < ApplicationController
     end
     render json: { message: random_method.sample(6) }
   end
+
+  def visits_method
+    visits = []
+    render json: { message: "Hi!" }
+  end
 end
