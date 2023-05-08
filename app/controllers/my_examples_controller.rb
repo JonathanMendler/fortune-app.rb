@@ -4,10 +4,11 @@ class MyExamplesController < ApplicationController
     render json: { message: fortunes.sample() }
   end
 
-  def randoms
-    random_method = [1..60]
+  def random_method
+    random_method = [*1..60]
     6.times do
       random_method.sample(6)
     end
+    render json: { message: random_method.sample(6) }
   end
 end
