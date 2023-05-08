@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get "/fortune_path", controller: "my_examples", action: "fortune_method"
+  get "/random_path", controller: "my_examples", action: "random_method"
 end
